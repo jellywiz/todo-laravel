@@ -30,3 +30,5 @@ Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 Route::post('/store-note', [TodoController::class, 'store'])->middleware('auth');
 
 Route::delete('/note/{note}/delete', [TodoController::class, 'destory'])->middleware('auth');
+
+Route::put('/note/{note}/update-status', [TodoController::class, 'updateStatus'])->middleware('auth');

@@ -62,9 +62,17 @@
                     <li>
                         {{$note->name}}
                     </li>
-                    <button class="check-btn standard-button">
-                        <li class="fas fa-check"></li>
-                    </button>
+                    <form action="/note/{{$note->id}}/update-status" method="POST" class="delete-form-button">
+                        @csrf
+                        @method('PUT')
+                        <button class="check-btn standard-button">
+                            @if($note->status === 0)
+                                <li class="fas fa-times"></li>
+                            @else
+                                <li class="fas fa-check"></li>
+                            @endif
+                        </button>
+                    </form>
                     <form action="/note/{{$note->id}}/delete" method="POST" class="delete-form-button">
                         @csrf
                         @method('DELETE')

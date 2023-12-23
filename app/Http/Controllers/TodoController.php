@@ -32,4 +32,10 @@ class TodoController extends Controller
         return redirect('/');
     }
 
+    public function updateStatus(Notes $note){
+        $note->update(['status' => !$note->status]);
+
+        return redirect()->back();
+    }
+
 }
