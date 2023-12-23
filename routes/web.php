@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TodoController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [TodoController::class, 'index']);
+
+Route::get('/register', [UserController::class, 'create']);
+
+Route::post('/user', [UserController::class, 'store']);
+
+Route::get('/login', [UserController::class, 'login']);
+
+Route::post('/store-note', [TodoController::class, 'store']);
+
+Route::delete('/note/{note}/delete', [TodoController::class, 'destory']);

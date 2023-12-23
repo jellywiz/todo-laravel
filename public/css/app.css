@@ -378,3 +378,43 @@ form button {
         box-shadow: 0 0 5px lightgray;
     }
 }
+.delete-form-button {
+    width: auto;
+}
+.delete-form-button > button{
+    padding: 0;
+    min-width: auto;
+}
+
+.form-container-register {
+    display: block;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+.form-container-register > *{
+    margin: 10px;
+    justify-content: center;
+}
+
+.form-container-register > button {
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.form-container-login {
+    display: block;
+}
+
+.form-container-login > *{
+    margin: 10px;
+}
+
+.form-container-login > button {
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+    border-radius: 50%;
+}
