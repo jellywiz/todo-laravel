@@ -31,7 +31,8 @@
 </div>
 
 <div id="login-form" class="form-container">
-    <form class="form-container-login">
+    <form class="form-container-login" action="/users/authenticate" method="POST">
+        @csrf
         <h2>Login</h2>
         <div class="input-container">
             <label for="username"><i class="fas fa-user"></i> Username or Email</label>
