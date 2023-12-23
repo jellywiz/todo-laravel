@@ -15,13 +15,15 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [TodoController::class, 'index']);
+Route::get('/', [TodoController::class, 'index'])->middleware('auth');
 
 Route::get('/register', [UserController::class, 'create']);
 
 Route::post('/user', [UserController::class, 'store']);
 
-Route::get('/login', [UserController::class, 'login']);
+Route::get('/login', [UserController::class, 'login'])->name('login');
+
+Route::post('/users/authenticate', [UserController::class, 'authenticate']);
 
 Route::post('/store-note', [TodoController::class, 'store']);
 

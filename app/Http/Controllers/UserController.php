@@ -26,4 +26,17 @@ class UserController extends Controller
     public function login(){
         return view('login');
     }
+
+    public function authenticate(Request $request){
+        $formValidation = $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required', 'min:6']
+        ]);
+
+        if (auth()->attempt($formValidation)){
+            $request->session()->regenerate();
+            return redirect('/');
+        }
+        return back()->withErrors(['email' => 'Invalid email or password'])->onlyInput('email');
+    }
 }
