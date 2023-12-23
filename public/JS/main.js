@@ -4,6 +4,8 @@ const lightTheme = document.querySelector('.light-theme');
 const darkerTheme = document.querySelector('.darker-theme');
 const textElement = document.querySelector('.text-element');
 
+
+
 // Event Listeners
 standardTheme.addEventListener('click', () => changeTheme('standard'));
 lightTheme.addEventListener('click', () => changeTheme('light'));

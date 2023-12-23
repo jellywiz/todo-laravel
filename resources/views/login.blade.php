@@ -52,5 +52,8 @@
 <!-- JavaScript files -->
 <script src="JS/time.js"></script>
 <script src="JS/main.js" type="text/javascript"></script>
+<div class="register-link">
+    <p>If you're not registered, <a href="/register">click here</a> to register.</p>
+</div>
 </body>
 </html>

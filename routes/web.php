@@ -17,14 +17,16 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [TodoController::class, 'index'])->middleware('auth');
 
-Route::get('/register', [UserController::class, 'create']);
+Route::get('/register', [UserController::class, 'create'])->middleware('guest');
 
-Route::post('/user', [UserController::class, 'store']);
+Route::post('/user', [UserController::class, 'store'])->middleware('auth');
 
-Route::get('/login', [UserController::class, 'login'])->name('login');
+Route::get('/login', [UserController::class, 'login'])->name('login')->middleware('guest');
 
-Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+Route::post('/users/authenticate', [UserController::class, 'authenticate'])->middleware('guest');
 
-Route::post('/store-note', [TodoController::class, 'store']);
+Route::post('/logout', [UserController::class, 'logout'])->middleware('auth');
 
-Route::delete('/note/{note}/delete', [TodoController::class, 'destory']);
+Route::post('/store-note', [TodoController::class, 'store'])->middleware('auth');
+
+Route::delete('/note/{note}/delete', [TodoController::class, 'destory'])->middleware('auth');

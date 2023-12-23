@@ -68,6 +68,9 @@
 <!-- JavaScript files -->
 <script src="JS/time.js"></script>
 <script src="JS/main.js" type="text/javascript"></script>
+<div class="register-link">
+    <p>If you already have an account, please, <a href="/login">click here</a> to Login.</p>
+</div>
 </body>
 
 </html>

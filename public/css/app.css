@@ -406,6 +406,7 @@ form button {
 
 .form-container-login {
     display: block;
+    width: auto;
 }
 
 .form-container-login > *{
@@ -418,3 +419,23 @@ form button {
     text-align: center;
     border-radius: 50%;
 }
+
+/* Add this CSS for the registration link */
+.register-link {
+    margin-top: 20px; /* Adjust margin as needed */
+    font-size: 1.7rem; /* Match the font size with other elements */
+    color: #ffdfdb; /* Match the text color */
+    text-align: center; /* Align the text in the center */
+}
+
+.register-link a {
+    color: #ffdfdb; /* Match the link color */
+    text-decoration: underline; /* Underline the link */
+    transition: color 0.3s ease-in-out; /* Smooth transition for color change */
+}
+
+.register-link a:hover {
+    color: #fff; /* Change color on hover */
+    /* Add any other hover effects you want */
+}
+

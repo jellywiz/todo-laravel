@@ -26,6 +26,12 @@
         <div class="standard-theme theme-selector"></div>
         <div class="light-theme theme-selector"></div>
         <div class="darker-theme theme-selector"></div>
+        <form class="form-container-login" method="POST" action="/logout">
+            @csrf
+            <button type="submit" >
+                <i class="fas fa-door-closed"></i>Logout
+            </button>
+        </form>
     </div>
     <h1 id="title">Just do it.<div id="border"></div></h1>
 </div>
